@@ -9,8 +9,10 @@ app.use(express.static("public"));
 
 
 //abro puerto del servidor
-app.listen(3000, () => {
-    console.log ("servidor corriendo");
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log ("servidor corriendo en el puerto: "+port);
 });
 
 //busco index 
